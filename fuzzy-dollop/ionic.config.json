@@ -1,7 +1,0 @@
-{
-  "name": "fuzzy-dollop",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "vue"
-}
