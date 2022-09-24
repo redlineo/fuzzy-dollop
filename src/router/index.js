@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
-import TabsPage from '../views/TabsPage.vue'
+import TabsPage from '@/views/TabsPage.vue'
 
 const routes = [
   {
@@ -11,20 +11,28 @@ const routes = [
     component: TabsPage,
     children: [
       {
-        path: '',
-        redirect: '/tabs/tab1'
+        path: '/tabs/tab1',
+        redirect: '/tabs/analysis'
       },
       {
-        path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue')
+        path: 'analysis',
+        name: 'analysis',
+        component: ()=>import('@/views/TabAnalysis.vue')
       },
       {
-        path: 'tab2',
-        component: () => import('@/views/Tab2Page.vue')
+        path: 'incomes',
+        name: 'incomes',
+        component: () => import('@/views/TabIncomes.vue')
       },
       {
-        path: 'tab3',
-        component: () => import('@/views/Tab3Page.vue')
+        path: 'expenses',
+        name: 'expenses',
+        component: () => import('@/views/TabExpenses.vue')
+      },
+      {
+        path: 'notifications',
+        name: 'notifications',
+        component: () => import('@/views/TabNotifications.vue')
       }
     ]
   }
